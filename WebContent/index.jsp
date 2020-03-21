@@ -14,6 +14,6 @@
 		out.write(userInfo.toString());
 	%>
 	
-	<h4>其他人修改</h4>
+	<h4>其他人修改，再次修改</h4>
 </body>
 </html>
