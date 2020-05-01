@@ -1,19 +1,16 @@
-<%@page import="javaee.entities.UserInfo"%>
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%	
+	pageContext.setAttribute("root",request.getContextPath());          
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>javaEE</title>
 </head>
 <body>
-	<h3>hello java!</h3>
-	<%
-		UserInfo userInfo=new UserInfo(Integer.valueOf(1001),"admin","123456");
-	
-		out.write(userInfo.toString());
-	%>
-	
-	<h4>其他人修改，再次修改</h4>
+	<script type="text/javascript">
+		window.location.href="homeServlet";
+	</script>
 </body>
 </html>

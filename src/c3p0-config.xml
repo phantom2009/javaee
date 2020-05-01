@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+
+	<named-config name="sqlserver">  
+        <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>  
+        <property name="jdbcUrl">jdbc:sqlserver://localhost:1433; DatabaseName=demo</property>  
+        <property name="user">sa</property>  
+        <property name="password">phantom2015!</property>  
+        
+        <property name="initialPoolSize">10</property>  
+        <property name="maxIdleTime">30</property>  
+        <property name="maxPoolSize">100</property>  
+        <property name="minPoolSize">10</property>  
+        <property name="maxStatements">200</property>  
+    </named-config>  
+
+	<named-config name="oracle">  
+        <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>  
+        <property name="jdbcUrl">jdbc:oracle:thin:@localhost:1521:ORCL</property>  
+        <property name="user">sa</property>  
+        <property name="password">phantom2010...</property>  
+        
+        <property name="initialPoolSize">10</property>  
+        <property name="maxIdleTime">30</property>  
+        <property name="maxPoolSize">100</property>  
+        <property name="minPoolSize">10</property>  
+        <property name="maxStatements">200</property>  
+    </named-config>  
+
+	<named-config name="mysql">		
+		<!-- 指定连接数据源的基本属性 -->
+		<property name="user">root</property>
+		<property name="password">god2017!</property>
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/07javaee</property>
+		
+		<!-- 若数据库中连接数不足时, 一次向数据库服务器申请多少个连接 -->
+		<property name="acquireIncrement">5</property>
+		<!-- 初始化数据库连接池时连接的数量 -->
+		<property name="initialPoolSize">5</property>
+		<!-- 数据库连接池中的最小的数据库连接数 -->
+		<property name="minPoolSize">5</property>
+		<!-- 数据库连接池中的最大的数据库连接数  数据库本身有最大连接数限制，可以使用select max函数查询，100-151之间的一个数字，我这里设置成50 -->
+		<property name="maxPoolSize">50</property>
+
+		<!-- C3P0 数据库连接池可以维护的 Statement 的个数 -->
+		<property name="maxStatements">20</property>
+		<!-- 每个连接同时可以使用的 Statement 对象的个数 -->
+		<property name="maxStatementsPerConnection">5</property>	
+	</named-config>
+		
+</c3p0-config>

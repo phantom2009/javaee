@@ -1,0 +1,119 @@
+@CHARSET "UTF-8";
+
+/*  */
+html,body{
+	width:100%;height:100%;
+}
+a{
+	color:#4780ea;padding:5px;cursor:pointer; 
+}
+/* 头部 */
+.header{
+	height:80px;border-bottom:1px solid #ebedf3;position:relative;
+}
+.header h1{
+	text-align:center;line-height:80px;
+}
+.header p{
+	width:300px;text-align:center;right:35px;bottom:5px;position:absolute;
+}
+/* 实现类似easyui layout的布局效果 */
+.main-container{
+	min-width:1200px;                   /* 宽度不可低于这个值，我们容忍最小的常规桌面系统是14寸笔记本 */
+	width:100%;height:auto;margin:0px auto;background-color:#f2f4fa;position:relative;
+	line-height:40px;font-size:12px;font-family:"微软雅黑";
+}
+.main-container .west{
+	width:200px;position:absolute;left:0;top:0; 
+}
+.main-container .center{
+	padding-left:15px;margin-left:200px;background-color:white;
+	overflow-x:hidden;
+	/*overflow-y:scroll; 只指定在横向不显示滚动条   */ 
+}
+/* 以上三个实现js布局，关于自适应高度使用js计算 */
+
+.main-container .west p{
+	color:#fff;font-size:16px;text-align:center;padding-right:50px;        /* 这种留padding给右侧折叠图片的技巧值得推广  */
+	background-color:#82afff;
+	background-image:url(../imgs/arrow_down.png);
+	background-repeat:no-repeat;
+	background-position:160px 20px;
+}
+.main-container .west ul#menu{
+	text-indent:40px;
+}
+.main-container .west ul#menu li{
+	cursor:pointer;
+}
+.main-container .west ul#menu .active{
+	background-color:#fff;
+}
+.main-container .center ul.bread-crumb li{
+	float:left;
+}
+/* 表格标题，非表格头，这个是美工具体要求 */
+p.title4table{
+	text-indent:10px;margin-top:10px;background-color:#ebedf3;clear:both;
+}
+/* 表格数据 table */
+.table-4-list{
+	width:100%;text-indent:10px;border:1px solid #ebedf3;border-collapse:collapse;clear:both;
+}
+.table-4-list .th{
+	background-color:#f6f7f9;
+}
+/* 表单表格 */
+.table-4-form{
+	width:100%;height:auto;background-color: #f6f7f8;border-collapse:collapse;font-size:12px;border: 1px solid #ebedf3; 
+}
+.table-4-form .th{
+	background-color:#ebedf3;font-size: 14px; 
+}
+.table-4-form tr{
+	height: 40px;text-indent: 15px;
+}
+.table-4-form tr td{
+	border-top: 1px solid #ebedf3;border-bottom: 1px solid #ebedf3;
+}
+.table-4-form .label{
+	padding-right:20px;text-align:right;width:120px;
+}
+.table-4-form .white{
+	background-color:white;
+}
+.table-4-form .white input[type=text],input[type=password]{
+	border:1px solid #ebedf3;border-radius:4px;width:60%;height:24px;
+}
+.toolBar{
+	clear:both;margin:5px 0 5px 0;
+}
+.searchBar{
+	width:100%;height:40px;background-color:#fbfbfb;text-indent:15px;
+}
+.searchBar input{
+	border:1px solid #ebedf3;border-radius:4px;width:60%;height:24px;
+}
+
+/* 分页组件 */
+ul.pageBar{
+	margin-left:40px;
+}
+ul.pageBar li{
+	float: left;margin:0px 5px;
+}
+ul.pageBar input.straightPage{
+	border:1px solid #ebedf3;border-radius:4px;width:35px;height:24px;text-indent:5px;
+}
+
+/* 按钮样式--宽度请自己规定 */
+.btn-default{
+	height:28px;line-height:28px;border-radius:4px;background-color:#4780EA;color:white;border:0px;cursor:pointer;
+}
+.btn-64{
+	width:64px;
+}
+.btn-import{
+	background-color:#EC614D;
+}
+

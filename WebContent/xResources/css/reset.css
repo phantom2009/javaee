@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+*{
+	margin:0;padding:0;
+}
+a{
+	text-decoration:none;
+}
+img{
+	border:0px; 
+}
+ul,li{
+	list-style:none;
+}
+.clearfix:after{ 
+    visibility:hidden;display: block; content: ""; clear: both;height: 0px; 
+}

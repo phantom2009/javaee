@@ -3,17 +3,16 @@ package javaee.entities;
 public class UserInfo {
 
 	private Integer id;
-	private String name;
-	private String password;
-	
+	private String userName;
+	private String userPassword;	
 	public UserInfo() {
 		super();
 	}
-	public UserInfo(Integer id, String name, String password) {
+	public UserInfo(Integer id, String userName, String userPassword) {
 		super();
 		this.id = id;
-		this.name = name;
-		this.password = password;
+		this.userName = userName;
+		this.userPassword = userPassword;
 	}
 	public Integer getId() {
 		return id;
@@ -21,21 +20,22 @@ public class UserInfo {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getUserName() {
+		return userName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
-	public String getPassword() {
-		return password;
+	public String getUserPassword() {
+		return userPassword;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
 	}
 	
 	@Override
 	public String toString() {
-		return "UserInfo [id=" + id + ", name=" + name + ", password=" + password + "]";
-	}	
+		return "UserInfo [id=" + id + ", userName=" + userName
+				+ ", userPassword=" + userPassword + "]";
+	}
 }
